@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-autoIncrement = require('mongoose-auto-increment');
+//autoIncrement = require('mongoose-auto-increment');
 require('dotenv/config');
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -13,11 +13,6 @@ const postsRoute = require('./routes/posts');
 
 app.use('/posts', postsRoute);
 
-
-//ROUTES
-app.get('/', (req,res) => {
-    res.send('We are on home');
-});
 
 //Connect To Db
 mongoose.connect(

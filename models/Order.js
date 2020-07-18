@@ -5,6 +5,11 @@ const mongoose = require('mongoose');
 
 const OrderSchema = mongoose.Schema({
     //number: {type: mongoose.Schema.Types.ObjectId},
+    orderItems: [{
+        sku: String,
+        size: Number,
+        price: Number
+    }],
     email: {
         type: String,
         required: true
@@ -27,4 +32,4 @@ const OrderSchema = mongoose.Schema({
 
 //OrderSchema.plugin(autoIncrement.plugin,'orders');
 //var Order = connection.model('orders', OrderSchema);
-module.exports = mongoose.model('orderses', OrderSchema);
+module.exports = mongoose.model('orders', OrderSchema);
