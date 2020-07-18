@@ -10,6 +10,10 @@ const User = require('../models/User');
 //SUBMITS A ORDER
 router.post('/order/Inserimento', async (req, res) => {
     const order = new Order({
+       orderItems: [{
+            sku: req.body.sku,
+            size: req.body.size,
+            price: req.body.price}],
        email: req.body.email,
        address: req.body.address,
        billingMethod: req.body.billingMethod
