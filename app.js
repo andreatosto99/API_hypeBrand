@@ -20,7 +20,7 @@ app.get('/', (req,res) => {
 });
 
 //Connect To Db
-var connection = mongoose.connect(
+mongoose.connect(
     process.env.DB_CONNECTION, { 
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -31,6 +31,6 @@ var connection = mongoose.connect(
     console.log('DB Connection error', {err:message});
 });
 
-autoIncrement.initialize(connection);
+//autoIncrement.initialize(connection);
 //How to we start listening to the server
 app.listen(3000);
