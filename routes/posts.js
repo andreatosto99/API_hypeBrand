@@ -4,16 +4,19 @@ const router = express.Router();
 const Item = require('../models/Item');
 const Order = require('../models/Order');
 const User = require('../models/User');
-
-
+sku_form = "FW395";
+size_form = 42;
+price_form = 220;
 //--------------. ORDER --------------
 //SUBMITS A ORDER
 router.post('/order/Inserimento', async (req, res) => {
     const order = new Order({
-       orderItems: [{
-            sku: req.body.sku,
-            size: req.body.size,
-            price: req.body.price}],
+        _id: req.body._id,
+        orderItems: [{
+             sku: sku_form,
+             size: size_form,
+             price: price_form
+           }],
        email: req.body.email,
        address: req.body.address,
        billingMethod: req.body.billingMethod
