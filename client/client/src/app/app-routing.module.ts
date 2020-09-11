@@ -10,7 +10,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'inserimento-item',
+    loadChildren: () => import('./inserimento-item/inserimento-item.module').then( m => m.InserimentoItemPageModule)
   },
+
 ];
 
 @NgModule({
