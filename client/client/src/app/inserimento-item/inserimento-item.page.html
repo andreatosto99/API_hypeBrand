@@ -1,9 +1,9 @@
-    
+    <ion-card>
       <ion-item color="light">
         <ion-icon name="happy-outline"  slot="start"></ion-icon>
         <ion-label position="stacked"><strong>Sku</strong>
         </ion-label>
-        <ion-input   [(ngModel)]="Sku" color="medium"></ion-input> 
+        <ion-input [(ngModel)]="skuView" color="medium"></ion-input> 
       </ion-item>
 
       
@@ -11,19 +11,22 @@
           <ion-icon name="happy-outline"  slot="start"></ion-icon>
           <ion-label position="stacked"><strong>Color</strong>
           </ion-label>
-          <ion-input   [(ngModel)]="Color" color="medium"></ion-input> 
+          <ion-input  [(ngModel)]="colorView" color="medium"></ion-input> 
         </ion-item>
 
         <ion-item color="light">
           <ion-icon name="happy-outline"  slot="start"></ion-icon>
           <ion-label position="stacked"><strong>Gender</strong>
           </ion-label>
-          <ion-input   [(ngModel)]="Gender" color="medium"></ion-input> 
+          <ion-input  [(ngModel)]="genderView" color="medium"></ion-input> 
         </ion-item>
 
         <ion-item color="light">
           <ion-icon name="happy-outline"  slot="start"></ion-icon>
           <ion-label position="stacked"><strong>Prize</strong>
           </ion-label>
-          <ion-input   [(ngModel)]="Prize" color="medium"></ion-input> 
+          <ion-input  [(ngModel)]="priceView" color="medium"></ion-input> 
         </ion-item>
+
+        <ion-button color="primary"  expand="full" (click)="popupConfermaInserimentoItem">Inserisci</ion-button>
+      </ion-card>
